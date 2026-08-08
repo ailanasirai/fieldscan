@@ -124,6 +124,7 @@ type PredictionResult = {
   confidence: number;
   severity: "mild" | "moderate" | "severe" | "healthy";
   healthy: boolean;
+  advisory: string;
 };
 
 export default function Home() {
@@ -346,7 +347,6 @@ export default function Home() {
           transition={{ duration: 0.6 }}
           className="grid grid-cols-[280px_1fr] gap-4 mb-10"
         >
-          {/* Weather card */}
           <div className="bg-white border border-[#E4DFD0] rounded-2xl p-5">
             <p className="text-xs uppercase tracking-wide text-[#6B7264] mb-1">field conditions</p>
 
@@ -400,7 +400,6 @@ export default function Home() {
             )}
           </div>
 
-          {/* Disease trends chart */}
           <div className="bg-white border border-[#E4DFD0] rounded-2xl p-5">
             <p className="text-xs uppercase tracking-wide text-[#6B7264] mb-1">disease trends</p>
             <p className="text-sm font-medium mb-4">Detections over the last 6 weeks</p>
@@ -440,7 +439,6 @@ export default function Home() {
           </div>
         </motion.section>
 
-        {/* Error banner */}
         <AnimatePresence>
           {error && (
             <motion.div
@@ -460,7 +458,6 @@ export default function Home() {
           )}
         </AnimatePresence>
 
-        {/* Upload / Scan area */}
         <input
           ref={fileInputRef}
           type="file"
@@ -537,7 +534,6 @@ export default function Home() {
             >
               <div className="relative w-56 h-56 rounded-xl overflow-hidden shrink-0">
                 <img src={previewUrl} alt="scanning" className="w-full h-full object-cover" />
-
                 <div className="absolute inset-0 bg-black/10" />
                 <div
                   className="absolute inset-0 opacity-20"
@@ -547,7 +543,6 @@ export default function Home() {
                     backgroundSize: "20px 20px",
                   }}
                 />
-
                 {[
                   "top-2 left-2 border-t-2 border-l-2",
                   "top-2 right-2 border-t-2 border-r-2",
@@ -556,20 +551,17 @@ export default function Home() {
                 ].map((pos, i) => (
                   <div key={i} className={`absolute ${pos} w-5 h-5 border-[#4C7A2E] rounded-sm`} />
                 ))}
-
                 <motion.div
                   className="absolute left-0 right-0 h-16 bg-gradient-to-b from-transparent via-[#4C7A2E]/35 to-transparent"
                   animate={{ top: ["-15%", "95%", "-15%"] }}
                   transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
                 />
-
                 <motion.div
                   className="absolute left-0 right-0 h-[2.5px] bg-[#8FD14F]"
                   style={{ boxShadow: "0 0 20px 4px rgba(143,209,79,0.9), 0 0 40px 8px rgba(76,122,46,0.5)" }}
                   animate={{ top: ["4%", "96%", "4%"] }}
                   transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
                 />
-
                 <motion.div
                   className="absolute inset-0 border-2 border-[#8FD14F] rounded-xl"
                   animate={{ opacity: [0.2, 0.6, 0.2] }}
@@ -654,14 +646,12 @@ export default function Home() {
                   </div>
                 )}
                 {activeTab === "treatment" && (
-                  <div className="bg-[#F2EEE3] border-l-2 border-[#4C7A2E] rounded-r-lg p-4 text-sm leading-relaxed">
-                    {result.healthy
-                      ? "No treatment needed — this leaf shows no signs of disease. Keep monitoring regularly."
-                      : "Treatment recommendations are generated per disease type in a future update via the Gemini advisory module. For now, consult a local agricultural extension officer for confirmed cases."}
+                  <div className="bg-[#F2EEE3] border-l-2 border-[#4C7A2E] rounded-r-lg p-4 text-sm leading-relaxed whitespace-pre-line">
+                    {result.advisory}
                   </div>
                 )}
                 {activeTab === "raw" && (
-                  <pre className="bg-[#F2EEE3] rounded-lg p-4 text-xs font-mono overflow-x-auto">
+                  <pre className="bg-[#F2EEE3] rounded-lg p-4 text-xs font-mono whitespace-pre-wrap break-words">
 {JSON.stringify(result, null, 2)}
                   </pre>
                 )}
@@ -670,7 +660,6 @@ export default function Home() {
           )}
         </AnimatePresence>
 
-        {/* Modules */}
         <motion.section
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
