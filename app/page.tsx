@@ -194,7 +194,7 @@ export default function Home() {
 
       setStage("scanning");
 
-      const res = await fetch("http://localhost:8000/predict", {
+      const res = await fetch("https://fieldscan-backend.fastapicloud.dev/predict", {
         method: "POST",
         body: formData,
       });

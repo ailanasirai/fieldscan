@@ -24,13 +24,13 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["http://localhost:3000", "https://*.vercel.app"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-model = tf.keras.models.load_model("../model/fieldscan_model.keras")
-with open("../model/class_names.json") as f:
+model = tf.keras.models.load_model("model/fieldscan_model.keras")
+with open("model/class_names.json") as f:
     class_names = json.load(f)
 
 def format_disease_name(raw_name: str) -> str:
