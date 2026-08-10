@@ -3,6 +3,8 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from "recharts";
+import { useRouter } from "next/navigation";
+import { supabase } from "@/lib/supabaseClient";
 
 function IconSearch() {
   return (
@@ -129,6 +131,27 @@ type PredictionResult = {
 
 export default function Home() {
   const [stage, setStage] = useState<Stage>("idle");
+  const router = useRouter();
+  const [authChecked, setAuthChecked] = useState(false);
+
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (!session) {
+        router.push("/sign-in");
+      } else {
+        setAuthChecked(true);
+      }
+    });
+
+    const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
+      if (!session) {
+        router.push("/sign-in");
+      }
+    });
+
+    return () => listener.subscription.unsubscribe();
+  }, [router]);
+
   const [progress, setProgress] = useState(0);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [dragOver, setDragOver] = useState(false);
@@ -225,6 +248,14 @@ export default function Home() {
     setError(null);
     setResult(null);
     setActiveTab("overview");
+  }
+
+  if (!authChecked) {
+    return (
+      <div className="min-h-screen bg-[#FAF7F0] flex items-center justify-center">
+        <div className="w-8 h-8 border-2 border-[#4C7A2E] border-t-transparent rounded-full animate-spin" />
+      </div>
+    );
   }
 
   return (
