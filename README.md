@@ -101,13 +101,13 @@ HOW TO ADD YOUR SCREENSHOTS (do this in GitHub, not VS Code):
 -->
 
 **Landing Page**
-[ landing page screenshot  ]
+
 
 **Sign In Page**
-[ sign-in page screenshot  ]
+
 
 **Scanning Animation**
-[ scan-in-progress screenshot  ]
+
 
 **Results Panel**
 [ results panel screenshot<img width="1898" height="829" alt="screenshot-scanning" src="https://github.com/user-attachments/assets/3317e7b7-6f73-4ce2-9e66-4915f22270bd" />
