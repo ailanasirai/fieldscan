@@ -1,4 +1,4 @@
-<div align="center">
+<img width="1901" height="830" alt="screenshot-signin" src="https://github.com/user-attachments/assets/a2746a36-b8ee-4446-862c-7943ea5b6c3f" /><div align="center">
 
 # 🌿 FieldScan
 
@@ -101,22 +101,23 @@ HOW TO ADD YOUR SCREENSHOTS (do this in GitHub, not VS Code):
 -->
 
 **Landing Page**
+![Uploading screenshot-landing.png…]()
 
 
 **Sign In Page**
+<img width="1901" height="830" alt="screenshot-signin" src="https://github.com/user-attachments/assets/b49823cb-ba97-4351-8efe-1a131f0146b5" />
 
 
 **Scanning Animation**
+<img width="1898" height="829" alt="screenshot-scanning" src="https://github.com/user-attachments/assets/04326336-d1a0-4835-b49c-10707a960c37" />
 
 
 **Results Panel**
-[ results panel screenshot<img width="1898" height="829" alt="screenshot-scanning" src="https://github.com/user-attachments/assets/3317e7b7-6f73-4ce2-9e66-4915f22270bd" />
-<img width="1901" height="830" alt="screenshot-signin" src="https://github.com/user-attachments/assets/7a33bc6d-9a1e-4f3e-8df3-2c6814d0470c" />
- ]
+<img width="1894" height="826" alt="screenshot-results" src="https://github.com/user-attachments/assets/1c600837-4e3a-4049-bfea-f8d19740c36d" />
+
 
 📺 **Demo Video:** _[Add unlisted YouTube link here]_
-![Uploading screenshot-landing.png…]()
-<img width="1894" height="826" alt="screenshot-results" src="https://github.com/user-attachments/assets/52612c46-b2de-410e-91f3-352ddfbf5622" />
+
 
 ---
 
