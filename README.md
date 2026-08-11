@@ -101,18 +101,22 @@ HOW TO ADD YOUR SCREENSHOTS (do this in GitHub, not VS Code):
 -->
 
 **Landing Page**
-[ landing page screenshot goes here ]
+[ landing page screenshot  ]
 
 **Sign In Page**
-[ sign-in page screenshot goes here ]
+[ sign-in page screenshot  ]
 
 **Scanning Animation**
-[ scan-in-progress screenshot goes here ]
+[ scan-in-progress screenshot  ]
 
 **Results Panel**
-[ results panel screenshot goes here ]
+[ results panel screenshot<img width="1898" height="829" alt="screenshot-scanning" src="https://github.com/user-attachments/assets/3317e7b7-6f73-4ce2-9e66-4915f22270bd" />
+<img width="1901" height="830" alt="screenshot-signin" src="https://github.com/user-attachments/assets/7a33bc6d-9a1e-4f3e-8df3-2c6814d0470c" />
+ ]
 
 📺 **Demo Video:** _[Add unlisted YouTube link here]_
+![Uploading screenshot-landing.png…]()
+<img width="1894" height="826" alt="screenshot-results" src="https://github.com/user-attachments/assets/52612c46-b2de-410e-91f3-352ddfbf5622" />
 
 ---
 
