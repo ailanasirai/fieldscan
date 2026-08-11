@@ -101,7 +101,7 @@ HOW TO ADD YOUR SCREENSHOTS (do this in GitHub, not VS Code):
 -->
 
 **Landing Page**
-![Uploading screenshot-landing.png…]()
+<img width="1892" height="829" alt="screenshot-landing" src="https://github.com/user-attachments/assets/8abfeb69-c45e-4100-9993-57683aa97e90" />
 
 
 **Sign In Page**
