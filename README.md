@@ -116,7 +116,9 @@ HOW TO ADD YOUR SCREENSHOTS (do this in GitHub, not VS Code):
 <img width="1894" height="826" alt="screenshot-results" src="https://github.com/user-attachments/assets/1c600837-4e3a-4049-bfea-f8d19740c36d" />
 
 
-📺 **Demo Video:** _[Add unlisted YouTube link here]_
+📺 **Demo Video:** 
+
+https://www.linkedin.com/posts/aila-nasir_ai-machinelearning-computervision-ugcPost-7493037571401392128-H--i/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF2cTtYBxi-tUrOHAF8vjXJALtn08g1fKXA
 
 
 ---
